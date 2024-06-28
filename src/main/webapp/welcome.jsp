@@ -9,6 +9,7 @@
 <body style="font-family: arial; zoom: 2; text-align: center;">
 	
 	<%
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 	
 		if(session.getAttribute("USER") == null){
 			response.sendRedirect("login.jsp");

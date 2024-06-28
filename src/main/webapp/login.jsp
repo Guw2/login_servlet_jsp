@@ -12,7 +12,7 @@
 	
 	<hr style="margin-bottom: 20px;">
 	
-	<form action="Login">
+	<form action="Login" method="post">
 		
 		USERNAME : <input type="text" name="username"><br>
 		PASSWORD : <input type="password" name="password" style="margin-top: 5px;"><br>

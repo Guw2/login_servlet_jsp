@@ -12,7 +12,7 @@ import jakarta.websocket.Session;
 @WebServlet("/Login")
 public class Login extends HttpServlet {
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
