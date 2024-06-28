@@ -6,6 +6,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import jakarta.websocket.Session;
 
 @WebServlet("/Login")
 public class Login extends HttpServlet {
@@ -16,6 +18,10 @@ public class Login extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		if(username.equals("admin") && password.equals("admin")) {
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("USER", username);
+			
 			response.sendRedirect("welcome.jsp");
 		}else {
 			response.sendRedirect("login.jsp");

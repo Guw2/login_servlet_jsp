@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body style="font-family: arial; zoom: 2; text-align: center;">
-	
+
 	<%
 	
 		if(session.getAttribute("USER") == null){
@@ -15,14 +15,6 @@
 		}
 	
 	%>
-	
-	Welcome ${USER}<br>
-	
-	<a href="profile.jsp">Your Profile</a>
-	<form action="Logout">
-	
-		<input type="submit" value="logout">
-	
-	</form>
+	Your Profile
 </body>
 </html>
